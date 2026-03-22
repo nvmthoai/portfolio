@@ -39,11 +39,11 @@ export default function Home() {
         {/* stats row */}
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
           <div className="bg-white/60 dark:bg-slate-800/60 p-6 rounded-lg text-center shadow-md">
-            <div className="text-3xl font-bold text-sky-600 dark:text-sky-300">5+</div>
+            <div className="text-3xl font-bold text-sky-600 dark:text-sky-300">1+</div>
             <div className="mt-2 text-sm text-slate-700 dark:text-slate-300">Năm kinh nghiệm</div>
           </div>
           <div className="bg-white/60 dark:bg-slate-800/60 p-6 rounded-lg text-center shadow-md">
-            <div className="text-3xl font-bold text-sky-600 dark:text-sky-300">20+</div>
+            <div className="text-3xl font-bold text-sky-600 dark:text-sky-300">10+</div>
             <div className="mt-2 text-sm text-slate-700 dark:text-slate-300">Dự án đã hoàn thành</div>
           </div>
           <div className="bg-white/60 dark:bg-slate-800/60 p-6 rounded-lg text-center shadow-md">
