@@ -4,6 +4,7 @@ import Header from '../components/Header'
 import PageTransition from '../components/PageTransition'
 import ScrollToTop from '../components/ScrollToTop'
 import LoadingOverlay from '../components/LoadingOverlay'
+import { Suspense } from 'react'
 
 import ThemeInitializer from '../components/ThemeInitializer'
 
@@ -15,7 +16,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <LoadingOverlay />
         <Header />
         <main className="max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8 py-8">
-          <ScrollToTop />
+          <Suspense fallback={null}>
+            <ScrollToTop />
+          </Suspense>
           <PageTransition>
             {children}
           </PageTransition>

@@ -1,11 +1,9 @@
 "use client"
-import { useEffect, useMemo } from "react"
-import { usePathname, useSearchParams } from "next/navigation"
+import { useEffect } from "react"
+import { usePathname } from "next/navigation"
 
 export default function ScrollToTop(){
   const pathname = usePathname()
-  const searchParams = useSearchParams()
-  const spStr = useMemo(() => (searchParams ? searchParams.toString() : ''), [searchParams])
 
   useEffect(()=>{
     // If there's a hash anchor (e.g. /page#section), scroll to that element.
@@ -28,7 +26,7 @@ export default function ScrollToTop(){
     // default: smooth scroll to top after a brief delay (works with page transitions)
     const t = setTimeout(()=> window.scrollTo({ top: 0, left: 0, behavior: 'smooth' }), 60)
     return ()=> clearTimeout(t)
-  },[pathname, spStr])
+  },[pathname])
 
   return null
 }
